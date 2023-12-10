@@ -1,0 +1,42 @@
+name: Build QMK firmware
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: qmkfm/qmk_cli
+    strategy:
+      fail-fast: false
+
+    steps:
+    - name: Checkout QMK
+      uses: actions/checkout@v3
+      with:
+        repository: sadekbaroudi/qmk_firmware
+        ref: develop_fingerpunch
+        submodules: true
+    
+    - name: Checkout keymap
+      uses: actions/checkout@v3
+      with:
+        path: keyboards/fingerpunch/vulpes_majora/v1/keymaps/${{ github.actor }}
+
+    # - name: Checkout Case Modes
+    #   uses: actions/checkout@v3
+    #   with:
+    #     repository: andrewjrae/kyria-keymap
+    #     path: keyboards/splitkb/kyria/keymaps/andrewjrae
+
+    - name: Build firmware
+      run: make fingerpunch/vulpes_majora/v1:${{ github.actor }} RGBLIGHT_ENABLE=yes FP_VM_RGB_6COL_WITH_CENTER=yes FP_TRACKBALL_ENABLE=yes ENCODER_ENABLE=yes HAPTIC_ENABLE=yes AUDIO_ENABLE=yes
+
+    - name: Archive firmware
+      uses: actions/upload-artifact@v3
+      with:
+        name: vulpes_majora_v1_${{ github.actor }}
+        retention-days: 2
+        path: |
+          *.hex
+          *.bin
+          *.uf2
+      continue-on-error: true
