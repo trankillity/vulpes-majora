@@ -112,7 +112,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [_NAVI] = LAYOUT_vulpes_majora(
-  KC_NO,      KC_INS,     KC_HOME,    KC_UP,      KC_END,     KC_PGUP,                                            KC_ESC,     C_STBI,     C_STBD,     C_DSKT,     _______,    _______,
+  KC_NO,      KC_INS,     KC_HOME,    KC_UP,      KC_END,     KC_PGUP,                                            KC_ESC,     C_STBI,     C_STBD,     C_DSKT,     _______,    TO(_SYST),
   C_TABI,     C_SELA,     KC_LEFT,    KC_DOWN,    KC_RGHT,    KC_PGDN,                                            KC_VOLU,    OSM_SFT,    OSM_CTL,    OSM_ALT,    OSM_GUI,    C_TABD,
   KC_NO,      C_UNDO,     C_CUT,      C_COPY,     C_PAST,     C_REDO,                                             KC_VOLD,    KC_MPRV,    KC_MPLY,    KC_MNXT,    KC_MSTP,    KC_MUTE,
                                       _______,    _______,    KC_DEL,       _______,    _______,    _______,      _______,    _______,    _______,    
@@ -122,7 +122,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [_SYST] = LAYOUT_vulpes_majora(
-  _______,    RGB_TOG,    RGB_RMOD,   RGB_MOD,    _______,    TO(_BASE),                                          _______,    _______,    _______,    _______,    _______,    _______,
+  _______,    RGB_TOG,    RGB_RMOD,   RGB_MOD,    _______,    TO(_BASE),                                          _______,    _______,    _______,    _______,    _______,    TO(_BASE),
   _______,    RGB_SPI,    RGB_HUI,    RGB_SAI,    RGB_VAI,    TO(_GAME),                                          _______,    _______,    _______,    _______,    _______,    _______,
   _______,    RGB_SPD,    RGB_HUD,    RGB_SAD,    RGB_VAD,    _______,                                            _______,    _______,    _______,    _______,    _______,    _______,
                                       _______,    _______,    _______,      _______,    _______,    _______,      _______,    _______,    _______,    
@@ -143,9 +143,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
-layer_state_t layer_state_set_user(layer_state_t state) {
-  return update_tri_layer_state(state, _NAVI, _NUMB, _SYST);
-}
+// layer_state_t layer_state_set_user(layer_state_t state) {
+//   return update_tri_layer_state(state, _NAVI, _NUMB, _SYST);
+// }
 
 const key_override_t comma_override = ko_make_basic(MOD_MASK_SHIFT, KC_COMMA, KC_SCLN);
 const key_override_t fstop_override = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, KC_COLON);

@@ -13,10 +13,10 @@ COMB(lang, KC_LT, KC_X, KC_C)
 COMB(rang, KC_GT, KC_COMM, KC_DOT)
 
 /* Symbols */
-COMB(mins, KC_MINUS, KC_P, KC_T)
+/* COMB(mins, KC_MINUS, KC_P, KC_T)
 COMB(unds, KC_UNDERSCORE, KC_L, KC_N)
 COMB(eqal, KC_EQUAL, KC_F, KC_S)
-COMB(excl, KC_EXCLAIM, KC_U, KC_E)
+COMB(excl, KC_EXCLAIM, KC_U, KC_E) */
 
 /* Functions */
 // COMB(capw, C_CAPW, KC_G, KC_M)
