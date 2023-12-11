@@ -1,0 +1,28 @@
+/* Combo Layout Pattern
+    KC_1,    KC_Q,    KC_W,    KC_F,    KC_P,    KC_B,          KC_J,    KC_L,    KC_U,       KC_Y,      KC_QUOT,    KC_4,
+    KC_2,    KC_A,    KC_R,    KC_S,    KC_T,    KC_G,          KC_M,    KC_N,    KC_E,       KC_I,      KC_O,       KC_5,
+    KC_3,    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,          KC_K,    KC_H,    KC_COMM,    KC_DOT,    KC_SLSH,    KC_6,
+*/
+
+/* Brackets */
+COMB(lbrk, KC_LBRC, KC_W, KC_F)
+COMB(rbrk, KC_RBRC, KC_U, KC_Y)
+COMB(lpar, KC_LPRN, KC_R, KC_S)
+COMB(rpar, KC_RPRN, KC_E, KC_I)
+COMB(lang, KC_LT, KC_X, KC_C)
+COMB(rang, KC_GT, KC_COMM, KC_DOT)
+
+/* Symbols */
+COMB(mins, KC_MINUS, KC_P, KC_T)
+COMB(unds, KC_UNDERSCORE, KC_L, KC_N)
+COMB(eqal, KC_EQUAL, KC_F, KC_S)
+COMB(excl, KC_EXCLAIM, KC_U, KC_E)
+
+/* Functions */
+// COMB(capw, C_CAPW, KC_G, KC_M)
+// COMB(snkc, C_SNKC, KC_B, KC_J)
+COMB(caps, KC_CAPS, KC_V, KC_K)
+
+/* System */
+COMB(login, C(A(KC_DEL)), KC_Q, KC_QUOT)
+COMB(boot, QK_BOOT, KC_Z, KC_X, KC_DOT, KC_SLSH)
