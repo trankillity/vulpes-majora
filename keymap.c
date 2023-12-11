@@ -131,7 +131,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               _______,                                                                                                                                            _______
 ),
 
-[_COMB] = LAYOUT_ffkb(
+[_COMB] = LAYOUT_vulpes_majora(
   KC_1,       KC_Q,       KC_W,       KC_F,       KC_P,       KC_B,                                               KC_J,       KC_L,       KC_U,       KC_Y,       KC_QUOT,    KC_4,
   KC_2,       KC_A,       KC_R,       KC_S,       KC_T,       KC_G,                                               KC_M,       KC_N,       KC_E,       KC_I,       KC_O,       KC_5,
   KC_3,       KC_Z,       KC_X,       KC_C,       KC_D,       KC_V,                                               KC_K,       KC_H,       KC_COMM,    KC_DOT,     KC_SLSH,    KC_6,
@@ -139,7 +139,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               _______,                _______,    _______,    _______,                                            _______,    _______,    _______,                _______,
   _______,    _______,    _______,                                                                                                                    _______,    _______,    _______,    
               _______,                                                                                                                                            _______
-)
+),
 
 };
 
