@@ -13,7 +13,7 @@ jobs:
       uses: actions/checkout@v3
       with:
         repository: sadekbaroudi/qmk_firmware
-        ref: develop_fingerpunch
+        # ref: develop_fingerpunch
         submodules: true
     
     - name: Checkout keymap
@@ -28,7 +28,7 @@ jobs:
     #     path: keyboards/splitkb/kyria/keymaps/andrewjrae
 
     - name: Build firmware
-      run: make fingerpunch/vulpes_majora/v1:${{ github.actor }}
+      run: make fingerpunch/vulpes_majora/v1:${{ github.actor }} FP_TRACKBALL_ENABLE=yes FP_VM_RGB_6COL_WITH_CENTER=yes      
 
     - name: Archive firmware
       uses: actions/upload-artifact@v3
