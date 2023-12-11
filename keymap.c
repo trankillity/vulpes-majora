@@ -1,5 +1,9 @@
 #include QMK_KEYBOARD_H
 
+#include "config.h"
+#include "g/keymap_combo.h"
+#include "casemodes.h"
+
 // Defines names for use in layer keycodes and the keymap
 enum layer_names {
     _BASE,
@@ -8,7 +12,7 @@ enum layer_names {
     _NAVI,
     _SYST,
     _MOUS,
-    _COMB  
+    _COMB
 };
 
 #define C_SELA      C(KC_A)
@@ -82,7 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   C_TABI,     KC_A,       KC_R,       KC_S,       KC_T,       KC_G,                                               KC_M,       KC_N,       KC_E,       KC_I,       KC_O,       C_TABD,
   OSM_CTL,    KC_Z,       KC_X,       KC_C,       KC_D,       KC_V,                                               KC_K,       KC_H,       KC_COMM,    KC_DOT,     KC_SLSH,    C_CENT,
                                       OSL_NUM,    OSM_SFT,    KC_BSPC,      KC_MS_BTN3, KC_MS_BTN1, KC_MS_BTN2,   KC_ENTER,   KC_SPC,     OSL_NAV,
-              KC_VOLU,                KC_MS_BTN1, KC_MS_BTN3, KC_MS_BTN2,                                         KCf_VOLD,    KC_MUTE,    KC_VOLU,                KC_VOLU,
+              KC_VOLU,                KC_MS_BTN1, KC_MS_BTN3, KC_MS_BTN2,                                         KC_VOLD,    KC_MUTE,    KC_VOLU,                KC_VOLU,
   KC_MPRV,    KC_MPLY,    KC_MNXT,                                                                                                                    KC_MPRV,    KC_MPLY,    KC_MNXT,
               KC_VOLD,                                                                                                                                            KC_VOLD
 ),
@@ -92,7 +96,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   C_TABI,     _______,    KC_A,       KC_S,       KC_D,       KC_F,                                               KC_M,       KC_N,       KC_E,       KC_I,       KC_O,       C_TABD,
   OSM_CTL,    _______,    KC_Z,       KC_X,       KC_C,       KC_D,                                               KC_K,       KC_H,       KC_COMM,    KC_DOT,     KC_SLSH,    C_CENT,
                                       OSL_NUM,    OSM_SFT,    KC_BSPC,      KC_MS_BTN3, KC_MS_BTN1, KC_MS_BTN2,   KC_ENTER,   KC_SPC,     OSL_NAV,
-              KC_VOLU,                KC_MS_BTN1, KC_MS_BTN3, KC_MS_BTN2,                                         KCf_VOLD,    KC_MUTE,    KC_VOLU,                KC_VOLU,
+              KC_VOLU,                KC_MS_BTN1, KC_MS_BTN3, KC_MS_BTN2,                                         KC_VOLD,    KC_MUTE,    KC_VOLU,                KC_VOLU,
   KC_MPRV,    KC_MPLY,    KC_MNXT,                                                                                                                    KC_MPRV,    KC_MPLY,    KC_MNXT,
               KC_VOLD,                                                                                                                                            KC_VOLD
 ),
