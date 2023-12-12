@@ -25,11 +25,11 @@ enum layer_names {
 #define C_STBI      FP_SUPER_TAB
 #define C_STBD      S(FP_SUPER_TAB)
 #define C_DSKT      G(KC_TAB)
-#define C_ACCL      FP_ACCEL_TOG
+// #define C_ACCL      FP_ACCEL_TOG
 #define C_CENT      C(KC_ENTER)
-#define C_SCRL      LT(0,KC_S)
-#define C_ZOOM      LT(0,KC_Z)
-#define C_MTOG      TG(_MOUS)
+// #define C_SCRL      LT(0,KC_S)
+// #define C_ZOOM      LT(0,KC_Z)
+// #define C_MTOG      TG(_MOUS)
 
 // Data Grip Shortcuts
 #define D_FMTC      C(A(KC_L))
