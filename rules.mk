@@ -1,10 +1,9 @@
-# FP_VM_RGB_6COL_WITH_CENTER=yes
 RGBLIGHT_ENABLE=yes
-ENCODER_ENABLE=yes
+# ENCODER_ENABLE=yes
 HAPTIC_ENABLE=yes
 AUDIO_ENABLE=yes
 
-# COMBO_ENABLE = yes
+COMBO_ENABLE = yes
 KEY_OVERRIDE_ENABLE = yes
 
-# VPATH += keyboards/gboards
+VPATH += keyboards/gboards
