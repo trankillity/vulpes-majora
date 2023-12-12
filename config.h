@@ -1,8 +1,8 @@
 #pragma once
 
-#define COMBO_VARIABLE_LEN
-#undef COMBO_TERM
-#define COMBO_TERM 30
+// #define COMBO_VARIABLE_LEN
+// #undef COMBO_TERM
+// #define COMBO_TERM 30
 
 #define PERMISSIVE_HOLD
 #define HOLD_ON_OTHER_KEY_PRESS
