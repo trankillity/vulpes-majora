@@ -7,12 +7,10 @@
 // Defines names for use in layer keycodes and the keymap
 enum layer_names {
     _BASE,
-    _GAME,
+    // _GAME,
     _NUMB,
     _NAVI,
-    _SYST,
-    _MOUS,
-    _COMB
+    _SYST
 };
 
 #define C_SELA      C(KC_A)
@@ -91,15 +89,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
               KC_VOLD,                                                                                                                                            KC_VOLD
 ),
 
-[_GAME] = LAYOUT_vulpes_majora(
-  KC_ESC,     _______,    KC_Q,       KC_W,       KC_E,       KC_R,                                               KC_J,       KC_L,       KC_U,       KC_Y,       KC_QUOT,    KC_BSLS,
-  C_TABI,     _______,    KC_A,       KC_S,       KC_D,       KC_F,                                               KC_M,       KC_N,       KC_E,       KC_I,       KC_O,       C_TABD,
-  OSM_CTL,    _______,    KC_Z,       KC_X,       KC_C,       KC_D,                                               KC_K,       KC_H,       KC_COMM,    KC_DOT,     KC_SLSH,    C_CENT,
-                                      OSL_NUM,    OSM_SFT,    KC_BSPC,      KC_MS_BTN3, KC_MS_BTN1, KC_MS_BTN2,   KC_ENTER,   KC_SPC,     OSL_NAV,
-              KC_VOLU,                KC_MS_BTN1, KC_MS_BTN3, KC_MS_BTN2,                                         KC_VOLD,    KC_MUTE,    KC_VOLU,                KC_VOLU,
-  KC_MPRV,    KC_MPLY,    KC_MNXT,                                                                                                                    KC_MPRV,    KC_MPLY,    KC_MNXT,
-              KC_VOLD,                                                                                                                                            KC_VOLD
-),
+// [_GAME] = LAYOUT_vulpes_majora(
+//   KC_ESC,     _______,    KC_Q,       KC_W,       KC_E,       KC_R,                                               KC_J,       KC_L,       KC_U,       KC_Y,       KC_QUOT,    KC_BSLS,
+//   C_TABI,     _______,    KC_A,       KC_S,       KC_D,       KC_F,                                               KC_M,       KC_N,       KC_E,       KC_I,       KC_O,       C_TABD,
+//   OSM_CTL,    _______,    KC_Z,       KC_X,       KC_C,       KC_D,                                               KC_K,       KC_H,       KC_COMM,    KC_DOT,     KC_SLSH,    C_CENT,
+//                                       OSL_NUM,    OSM_SFT,    KC_BSPC,      KC_MS_BTN3, KC_MS_BTN1, KC_MS_BTN2,   KC_ENTER,   KC_SPC,     OSL_NAV,
+//               KC_VOLU,                KC_MS_BTN1, KC_MS_BTN3, KC_MS_BTN2,                                         KC_VOLD,    KC_MUTE,    KC_VOLU,                KC_VOLU,
+//   KC_MPRV,    KC_MPLY,    KC_MNXT,                                                                                                                    KC_MPRV,    KC_MPLY,    KC_MNXT,
+//               KC_VOLD,                                                                                                                                            KC_VOLD
+// ),
 
 [_NUMB] = LAYOUT_vulpes_majora(
   KC_F6,      KC_F5,      KC_F4,      KC_F3,      KC_F2,      KC_F1,                                              KC_EQL,     KC_7,       KC_8,       KC_9,       KC_DOT,     KC_COMM,
@@ -124,7 +122,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_SYST] = LAYOUT_vulpes_majora(
   _______,    RGB_TOG,    RGB_RMOD,   RGB_MOD,    _______,    TO(_BASE),                                          _______,    _______,    _______,    _______,    _______,    TO(_BASE),
   _______,    RGB_SPI,    RGB_HUI,    RGB_SAI,    RGB_VAI,    TO(_GAME),                                          _______,    _______,    _______,    _______,    _______,    _______,
-  _______,    RGB_SPD,    RGB_HUD,    RGB_SAD,    RGB_VAD,    _______,                                            _______,    _______,    _______,    _______,    _______,    _______,
+  _______,    RGB_SPD,    RGB_HUD,    RGB_SAD,    RGB_VAD,    _______,                                            _______,    _______,    _______,    _______,    QK_BOOT,    _______,
                                       _______,    _______,    _______,      _______,    _______,    _______,      _______,    _______,    _______,    
               _______,                _______,    _______,    _______,                                            _______,    _______,    _______,                _______,
   _______,    _______,    _______,                                                                                                                    _______,    _______,    _______,    
