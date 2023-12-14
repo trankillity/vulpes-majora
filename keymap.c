@@ -1,7 +1,7 @@
 #include QMK_KEYBOARD_H
 
 #include "config.h"
-#include "g/keymap_combo.h"
+// #include "g/keymap_combo.h"
 // #include "casemodes.h"
 
 // Defines names for use in layer keycodes and the keymap
