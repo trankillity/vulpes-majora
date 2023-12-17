@@ -46,6 +46,14 @@ enum layer_names {
 #define OSL_NUM     OSL(_NUMB)
 #define OSL_NAV     OSL(_NAVI)
 
+#define F_DPRS      FP_POINT_DPI_RESET
+#define F_DPUP      FP_POINT_DPI_UP
+#define F_DPDN      FP_POINT_DPI_DN
+#define F_SCRS      FP_SCROLL_DPI_RESET
+#define F_SCUP      FP_SCROLL_DPI_UP
+#define F_SCDN      FP_SCROLL_DPI_DN
+#define F_ACTG      FP_ACCEL_TOG
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* 
@@ -122,9 +130,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 [_SYST] = LAYOUT_vulpes_majora(
-  _______,    RGB_TOG,    RGB_RMOD,   RGB_MOD,    _______,    TO(_BASE),                                          _______,    _______,    _______,    _______,    _______,    TO(_BASE),
-  _______,    RGB_SPI,    RGB_HUI,    RGB_SAI,    RGB_VAI,    _______,                                            _______,    _______,    _______,    _______,    _______,    _______,
-  _______,    RGB_SPD,    RGB_HUD,    RGB_SAD,    RGB_VAD,    _______,                                            _______,    _______,    _______,    _______,    QK_BOOT,    _______,
+  _______,    RGB_TOG,    RGB_RMOD,   RGB_MOD,    _______,    TO(_BASE),                                          _______,    F_DPRS,     F_SCRS,     _______,    _______,    TO(_BASE),
+  _______,    RGB_SPI,    RGB_HUI,    RGB_SAI,    RGB_VAI,    _______,                                            F_ACTG,     F_DPUP,     F_SCUP,     _______,    _______,    _______,
+  _______,    RGB_SPD,    RGB_HUD,    RGB_SAD,    RGB_VAD,    _______,                                            _______,    F_DPDN,     F_SCDN,     _______,    QK_BOOT,    _______,
                                       _______,    _______,    _______,      _______,    _______,    _______,      _______,    _______,    _______,    
               _______,                _______,    _______,    _______,                                            _______,    _______,    _______,                _______,
   _______,    _______,    _______,                                                                                                                    _______,    _______,    _______,    
