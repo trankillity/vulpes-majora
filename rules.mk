@@ -3,7 +3,7 @@ ENCODER_ENABLE=yes
 HAPTIC_ENABLE=yes
 AUDIO_ENABLE=yes
 
-# COMBO_ENABLE = yes
+COMBO_ENABLE = yes
 KEY_OVERRIDE_ENABLE = yes
 
-# VPATH += keyboards/gboards
+VPATH += keyboards/gboards

@@ -1,7 +1,7 @@
 #include QMK_KEYBOARD_H
 
 #include "config.h"
-// #include "g/keymap_combo.h"
+#include "g/keymap_combo.h"
 // #include "casemodes.h"
 
 // Defines names for use in layer keycodes and the keymap
@@ -143,10 +143,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 ),
 
 };
-
-// layer_state_t layer_state_set_user(layer_state_t state) {
-//   return update_tri_layer_state(state, _NAVI, _NUMB, _SYST);
-// }
 
 const key_override_t comma_override = ko_make_basic(MOD_MASK_SHIFT, KC_COMMA, KC_SCLN);
 const key_override_t fstop_override = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, KC_COLON);
